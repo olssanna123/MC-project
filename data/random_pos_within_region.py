@@ -1,12 +1,13 @@
-# Importing Modules
 import numpy as np
 import random
-# Use 'conda install shapely' to import the shapely library.
 from shapely.geometry import Polygon, Point
 
-# Define the desired polygon
+# coordinates for approximation region as tuples
+# North east south west coordinates (latitude, longitude)
+Ale = [(58.116472, 12.397922), (57.990763, 12.410281), (57.805393, 12.016147), (58.002408, 12.130130)]
 
-poly = Polygon([(37.75850848099701, -122.50833008408812), (37.75911919711413, -122.49648544907835),(37.751620611284935, -122.4937388670471),(37.74863453749236, -122.50742886185911)])
+# define polygon
+poly = Polygon(Ale)
 
 #Defining the randomization generator
 def polygon_random_points (poly, num_points):
@@ -18,7 +19,16 @@ def polygon_random_points (poly, num_points):
             points.append(random_point)
     return points
 # Choose the number of points desired. This example uses 20 points.
-points = polygon_random_points(poly,20)
+points = polygon_random_points(poly,2)
 # Printing the results.
+#for p in points:
+#    print(p.x,",",p.y)
+
+generated_points = []
 for p in points:
-    print(p.x,",",p.y)
+    x = p.x
+    y = p.y
+    coord = [x,y]
+    generated_points.append(coord)
+
+print(generated_points)
