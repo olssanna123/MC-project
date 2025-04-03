@@ -1,5 +1,6 @@
 from calculate_time import distance_matrix
 from data import generate_data
+from data import region_approximation
 
 # generate array to sample from
 sampling_array = generate_data.create_sampling_array()
