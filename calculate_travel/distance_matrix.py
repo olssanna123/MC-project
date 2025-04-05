@@ -2,7 +2,7 @@ import googlemaps
 # API key for google maps
 gmaps = googlemaps.Client(key='AIzaSyC16dY7QjOJl2isIQrDoO1uT5Ctit-F8wY')
 
-# Calculate travel distances from sample to Sahlgrenska Universitetssjukhuset using Google Maps distance matrix
+# Calculate calculate_travel distances from sample to Sahlgrenska Universitetssjukhuset using Google Maps distance matrix
 def calculate_distances(samples):
     distances = []
     i = 0
